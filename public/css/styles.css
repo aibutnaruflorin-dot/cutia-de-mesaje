@@ -1,0 +1,124 @@
+/* Cutia de Mesaje — styles. Tokens from docs/design.md. */
+:root {
+  --primary: #2B59C3;
+  --primary-dark: #1F458F;
+  --background: #F4F6FB;
+  --surface: #FFFFFF;
+  --text: #1F2733;
+  --muted: #6B7685;
+  --border: #DDE3ED;
+  --success: #1E7F4F;
+  --success-bg: #E4F4EC;
+  --error: #C8372D;
+  --error-bg: #FBE9E7;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(20, 30, 50, 0.08), 0 4px 12px rgba(20, 30, 50, 0.06);
+  --font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--background);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .brand { font-weight: 700; font-size: 18px; color: var(--text); text-decoration: none; }
+.nav-link, .linkbtn {
+  color: var(--primary); font-weight: 600; font-size: 14px;
+  text-decoration: none;
+}
+.nav-link:hover, .linkbtn:hover { text-decoration: underline; }
+.linkbtn { background: none; border: none; cursor: pointer; font-family: inherit; }
+
+.main { padding: 32px 16px; display: flex; justify-content: center; }
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 420px;
+}
+.panel-wide { max-width: 640px; }
+
+h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+.intro { color: var(--muted); margin-bottom: 24px; font-size: 15px; }
+
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.field input, .field textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 15px;
+  color: var(--text);
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+}
+.field textarea { resize: vertical; min-height: 120px; }
+.field input:focus, .field textarea:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+.field .error-text { display: none; color: var(--error); font-size: 13px; margin-top: 4px; }
+.field.invalid .error-text { display: block; }
+.field.invalid input, .field.invalid textarea { border-color: var(--error); }
+.hint { display: block; color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+.btn {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 11px 20px;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  cursor: pointer;
+  width: 100%;
+}
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-primary:disabled { opacity: 0.6; cursor: not-allowed; }
+.btn:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+.banner {
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.banner-success { background: var(--success-bg); color: var(--success); }
+.banner-error { background: var(--error-bg); color: var(--error); }
+.banner[hidden] { display: none; }
+
+.form-foot { margin-top: 16px; font-size: 14px; color: var(--muted); text-align: center; }
+.form-foot a { color: var(--primary); font-weight: 600; }
+.form-foot[hidden] { display: none; }
+
+.list-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px; }
+.count { color: var(--muted); font-size: 14px; }
+.message-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.message-card .who { font-weight: 700; font-size: 15px; }
+.message-card .meta { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+.message-card .body { font-size: 15px; white-space: pre-wrap; word-wrap: break-word; }
+.empty { color: var(--muted); text-align: center; padding: 32px 0; }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contactează-ne — Cutia de Mesaje</title>
+  <meta name="description" content="Trimite-ne un mesaj prin formularul de contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="brand">Cutia de Mesaje</a>
+    <a href="/login" class="nav-link">Admin</a>
+  </header>
+  <main class="main">
+    <div class="panel">
+      <h1>Contactează-ne</h1>
+      <p class="intro">Completează formularul și îți răspundem cât putem de repede.</p>
+
+      <div class="banner banner-success" id="successBanner" role="status" hidden>
+        Mesajul tău a fost trimis. Mulțumim!
+      </div>
+      <div class="banner banner-error" id="errorBanner" role="alert" hidden></div>
+
+      <form id="contactForm" novalidate>
+        <div class="field" id="field-name">
+          <label for="name">Nume</label>
+          <input type="text" id="name" name="name" autocomplete="name" />
+          <span class="error-text" id="err-name"></span>
+        </div>
+        <div class="field" id="field-email">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" />
+          <span class="error-text" id="err-email"></span>
+        </div>
+        <div class="field" id="field-message">
+          <label for="message">Mesaj</label>
+          <textarea id="message" name="message"></textarea>
+          <span class="error-text" id="err-message"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Trimite mesajul</button>
+      </form>
+    </div>
+  </main>
+  <script src="/js/contact.js"></script>
+</body>
+</html>

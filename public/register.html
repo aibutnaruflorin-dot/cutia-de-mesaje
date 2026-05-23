@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creează contul de admin — Cutia de Mesaje</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="/" class="brand">Cutia de Mesaje</a>
+    <a href="/" class="nav-link">← Înapoi</a>
+  </header>
+  <main class="main">
+    <div class="panel">
+      <h1>Creează contul de admin</h1>
+      <p class="intro">Acesta e contul cu care vei citi mesajele. Se creează o singură dată.</p>
+
+      <div class="banner banner-error" id="errorBanner" role="alert" hidden></div>
+
+      <form id="registerForm" novalidate>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="username" />
+        </div>
+        <div class="field">
+          <label for="password">Parolă</label>
+          <input type="password" id="password" name="password" autocomplete="new-password" />
+          <span class="hint">Minim 8 caractere.</span>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Creează contul</button>
+      </form>
+
+      <p class="form-foot"><a href="/login">Ai deja cont? Autentifică-te</a></p>
+    </div>
+  </main>
+  <script src="/js/register.js"></script>
+</body>
+</html>

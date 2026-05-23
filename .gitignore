@@ -1,0 +1,16 @@
+node_modules/
+
+# Secrets — never commit
+.env
+
+# SQLite database files
+data.db
+data.db-shm
+data.db-wal
+
+# Playwright
+test-results/
+playwright-report/
+
+# OS / editor
+.DS_Store
